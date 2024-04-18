@@ -25,7 +25,9 @@ import pickle
 
 
 class ArabicTextCleaning:
-    def remove_diactrics(text):
+    def __init__(self, path): 
+        self.path = path
+    def remove_diacritics(self,text):
         arabic_diacritics = re.compile("""
                                 ّ    | # Tashdid
                                 َ    | # Fatha
@@ -99,3 +101,17 @@ class ArabicTextCleaning:
       'levant': 'الشام'}
 
         data['dialect'] = data['dialect'].replace(mapping_dict)
+
+
+    def load_data(self): 
+        data = pd.read_csv(self.path)
+        return data.head()
+    
+    def drop_columns(self,data):  
+        data = data.drop(['rephrase', 'id'], axis=1)
+        return data.head()
+    
+    def split_data(self, X, y): 
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        return X_train, X_test, y_train, y_test
+
