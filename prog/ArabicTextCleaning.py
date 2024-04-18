@@ -7,7 +7,6 @@ import string
 from bs4 import BeautifulSoup
 from sklearn.model_selection import train_test_split
 from transformers import TFAutoModelForSequenceClassification, AutoTokenizer, AutoConfig, AdamW
-from arabert import ArabertPreprocessor
 import shutil
 import warnings
 import numpy as np
