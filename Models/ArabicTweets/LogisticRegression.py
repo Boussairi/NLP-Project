@@ -20,8 +20,7 @@ class LogisticRegression:
     def evaluateModel(self, y_pred, y_test): 
         accuracy = accuracy_score(y_test, y_pred)
         f1 = f1_score(y_test, y_pred)
-
-        print("Accuracy:", accuracy)
-        print("F1 Score:", f1)
+        return accuracy, f1
+       
 
 
