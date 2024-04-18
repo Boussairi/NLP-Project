@@ -1,6 +1,5 @@
 from transformers import AutoTokenizer, AutoModel
 import torch
-from arabert import ArabertPreprocessor
 
 
 
