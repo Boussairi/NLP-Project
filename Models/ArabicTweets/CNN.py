@@ -9,34 +9,33 @@ class RNN:
 
         pass
 
-    def configModel(self):
+    def configModel(input_shape):
         model = tf.keras.Sequential([
-            
-            tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(128, dropout=0.5, return_sequences=True)),
-            tf.keras.layers.Bidirectional(tf.keras.layers.GRU(128, dropout=0.5, return_sequences=True)),
-            
+            tf.keras.layers.InputLayer(input_shape=input_shape),
+
             # Conv1D layer for pattern recognition model and extract the feature from the vectors
             tf.keras.layers.Conv1D(filters=64, kernel_size=3, activation="relu"),
-            
             tf.keras.layers.BatchNormalization(),
-            
+
+            tf.keras.layers.LSTM(128, dropout=0.5, return_sequences=True),
+
             # GlobalMaxPooling layer to extract relevant features
             tf.keras.layers.GlobalMaxPool1D(),
-            
-            # First Dense layer with 64 neurons and ReLU activation
+
+            # Dense layer with 64 neurons and ReLU activation
             tf.keras.layers.Dense(64, activation='relu'),
-            
+
             # Dropout layer to prevent overfitting
             tf.keras.layers.Dropout(0.5),
-            
+
             # Final Dense layer with 1 neuron and sigmoid activation for binary classification
             tf.keras.layers.Dense(1, activation='sigmoid')
         ])
-        
-        # compile the model
-        model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), metrics=["accuracy"], loss="binary_crossentropy")
-        
+
+        model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.00005), metrics=["accuracy"], loss="binary_crossentropy")
+
         return model
+
     
     def predict(self,X_test, rnn_model): 
 
