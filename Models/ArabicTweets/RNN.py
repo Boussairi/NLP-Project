@@ -56,3 +56,11 @@ class RNN:
         # Evaluate test loss and accuracy
         test_loss, test_accuracy = rnn_model.evaluate(X_test, y_test)
         return test_precision, test_recall, test_f1_score, test_loss, test_accuracy
+
+    def plotTrainingHistory(self, history): 
+        plt.plot(history.history['accuracy'], label='accuracy')
+        plt.plot(history.history['val_accuracy'], label='val_accuracy')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.legend(loc='lower right')
+        plt.show()

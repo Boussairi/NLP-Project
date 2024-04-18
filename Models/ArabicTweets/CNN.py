@@ -4,12 +4,12 @@ from sklearn.metrics import precision_score, recall_score, f1_score
 import matplotlib.pyplot as plt
 
 
-class RNN:  
+class CNN:  
     def __init__(self): 
 
         pass
 
-    def configModel(input_shape):
+    def configModel(self, input_shape):
         model = tf.keras.Sequential([
             tf.keras.layers.InputLayer(input_shape=input_shape),
 
@@ -37,21 +37,28 @@ class RNN:
         return model
 
     
-    def predict(self,X_test, rnn_model): 
+    def predict(self,X_test, cnn_model): 
 
-        y_pred_probs = rnn_model.predict(X_test)
+        y_pred_probs = cnn_model.predict(X_test)
 
         # Threshold probabilities to obtain predicted classes
         y_pred = (y_pred_probs > 0.5).astype(int)
         return y_pred
 
 
-
-    def evaluateRNN(self,X_test, y_test, y_pred, rnn_model): 
+    def evaluateCNN(self,X_test, y_test, y_pred, cnn_model): 
         test_precision = precision_score(y_test, y_pred)
         test_recall = recall_score(y_test, y_pred)
         test_f1_score = f1_score(y_test, y_pred)
 
         # Evaluate test loss and accuracy
-        test_loss, test_accuracy = rnn_model.evaluate(X_test, y_test)
+        test_loss, test_accuracy = cnn_model.evaluate(X_test, y_test)
         return test_precision, test_recall, test_f1_score, test_loss, test_accuracy
+
+    def plotTrainingHistory(self, history): 
+        plt.plot(history.history['accuracy'], label='accuracy')
+        plt.plot(history.history['val_accuracy'], label='val_accuracy')
+        plt.xlabel('Epoch')
+        plt.ylabel('Accuracy')
+        plt.legend(loc='lower right')
+        plt.show()

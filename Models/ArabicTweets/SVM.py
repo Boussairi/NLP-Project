@@ -20,9 +20,9 @@ class SVM:
 
         return y_pred
 
-def evaluate_model(model, y_pred, y_test)
-    # Calculate F1 score
-    accuracy = accuracy_score(y_test, y_pred)
-    f1 = f1_score(y_test, y_pred)
+    def evaluate_model(self, y_pred, y_test):
+        # Calculate F1 score
+        accuracy = accuracy_score(y_test, y_pred)
+        f1 = f1_score(y_test, y_pred)
 
-    return accuracy, f1
+        return accuracy, f1

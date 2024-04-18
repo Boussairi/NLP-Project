@@ -104,11 +104,11 @@ class ArabicTextCleaning:
 
     def load_data(self): 
         data = pd.read_csv(self.path)
-        return data.head()
+        return data
     
     def drop_columns(self,data):  
         data = data.drop(['rephrase', 'id'], axis=1)
-        return data.head()
+        return data
     
     def split_data(self, X, y): 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
