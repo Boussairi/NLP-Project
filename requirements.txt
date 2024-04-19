@@ -1,0 +1,10 @@
+transformers
+tensorflow
+scikit-learn
+torch
+pandas
+numpy
+matplotlib
+keras
+seaborn
+alphabet-detector
