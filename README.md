@@ -1,5 +1,5 @@
 # NLP-Project : Sarcasm detection in Arabic and English texts
-============================================================
+La détection du sarcasme dans les tweets, notamment dans les contextes informels arabes, est l'un des défis les plus complexes de la classification de texte. Comprendre le sarcasme est crucial pour saisir l'intention réelle des individus. Notre projet vise à améliorer les performances de détection du sarcasme dans les tweets en proposant des approches novatrices. Nous avons effectué une étude exhaustive des travaux connexes et exploré diverses méthodes et architectures existantes. Notre contribution réside dans la sélection et la combinaison des meilleurs modèles et techniques pour améliorer la précision de la détection du sarcasme. Nous avons constaté que l'utilisation de différentes combinaisons de modèles, notamment CNN, SVM, LSTM et Hard voting, permet d'obtenir des résultats prometteurs. Notre travail contribue ainsi à l'amélioration des capacités des modèles d'IA à interpréter le langage humain dans divers domaines d'application.
 
 ## Structure du Projet
 
@@ -70,7 +70,7 @@ La structure du projet est organisée comme suit :
 
    ```bash
    # Clonez le dépôt GitHub
-   git clone (https://github.com/jinan02/projet_ift712)
+   git clone (https://github.com/Boussairi/NLP-Project.git)
    cd nom-du-projet
    
    # Créez un environnement virtuel (optionnel, mais recommandé)
