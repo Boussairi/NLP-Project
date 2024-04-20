@@ -25,7 +25,9 @@ La détection du sarcasme dans les tweets, notamment dans les contextes informel
     ├── train/
     │   ├── train.Ar.csv
     │   ├── train.En.csv
-    │   ├── data_for_augmentation.csv   
+    │   ├── data_for_augmentation.csv  
+    ├── third-party-data
+        ├── Radmme.md
     ├── ArabicTask.ipynb
     ├── EnglishTask.ipynb
     ├── Task B.ipynb
@@ -56,6 +58,8 @@ La structure du projet est organisée comme suit :
   - **train.Ar.csv** : Données d'entrainement contenants les tweets arabes.
   - **train.En.csv** : Données d'entrainement contenants les tweets anglais.
   - **data_for_augmentation.csv** : Données générées en utilisant les 3 methodes d'augmentation de données (double traduction, traduction et random swap and deletion) .
+    
+- **third-party data/** : Répertoire contenant un Readme où nous avons spécifié le lien du Drive où nous avons mis les données externes utilisées 
 
 - **ArabicTask.ipynb** : Fichier Jupyter Notebook contenant le code principal de la Tache A en Arabe .
 - **EnglishTask.ipynb** : Fichier Jupyter Notebook contenant le code principal de la Tache A en Anglais.
