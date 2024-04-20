@@ -28,6 +28,7 @@ La détection du sarcasme dans les tweets, notamment dans les contextes informel
     │   ├── data_for_augmentation.csv   
     ├── ArabicTask.ipynb
     ├── EnglishTask.ipynb
+    ├── Task B.ipynb
     ├── requirements.txt
     ├── .gitignore
     └── README.md
@@ -58,6 +59,7 @@ La structure du projet est organisée comme suit :
 
 - **ArabicTask.ipynb** : Fichier Jupyter Notebook contenant le code principal de la Tache A en Arabe .
 - **EnglishTask.ipynb** : Fichier Jupyter Notebook contenant le code principal de la Tache A en Anglais.
+- **Task B.ipynb** : Fichier Jupyter Notebook contenant le code principal de la Tache B.
 
 
 - **requirements.txt** : Fichier spécifiant les dépendances du projet.
@@ -91,6 +93,7 @@ La structure du projet est organisée comme suit :
 Une fois que l'installation est terminée, vous pouvez lancer le projet en:
 - Pour la tache arabe:  exécutez le notebook  ArabicTask.ipynb qui fait appel aux classes definies dans la structure du projet
 - Pour la tache anglaise:  exécutez le notebook EnglishTask.ipynb qui fait appel aux classes definies dans la structure du projet
+- Pour la tache B:  exécutez le notebook Task B.ipynb qui fait appel aux classes definies dans la structure du projet
 
 ```bash
 # Exemple de commande pour exécuter le script d'entraînement
